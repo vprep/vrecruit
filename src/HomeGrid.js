@@ -4,20 +4,20 @@ import { withStyles } from 'material-ui/styles';
 import Radio, {RadioGroup } from 'material-ui/RadioButton';
 import Paper from 'material-ui/Paper';
 import { render } from 'react-dom';
-import { Grid,Row, Col} from 'react-bootstrap'
+import {GridList, GridTile} from 'material-ui/GridList';
 
-const styles = theme => ({
+const styles = {
     root: {
-        flexGrow:1,
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
     },
-    paper: {
-        height:140,
-        width:100,
+    gridList: {
+        width: '100%',
+        height: '100%',
+        overflowY: 'auto',
     },
-    control:{
-        padding:theme.spacing.unit * 2,
-    },
-});
+};
 
 class HomeGrid extends React.Component {
     state = {
@@ -25,22 +25,20 @@ class HomeGrid extends React.Component {
     };
 
     render(){
-        const { classes } = this.props;
-        const { spacing } = this.state;
 
         return (
-            <Grid>
-                <Row className="show-grid">
-                    <Col sm={6}>
-                        <h1>Grid</h1>
-                    </Col>
-                    <Col sm={6}>
-                        <h1>Grid</h1>
-                    </Col>
-                </Row>
-            </Grid>
+            <div style={styles.root}>
+    <GridList cellHeight={180} style = {styles.gridList}>
+    <GridTile>
+        <h1>Grid 1</h1>
+        </GridTile>
+        <GridTile>
+        <h1>Grid 2</h1>
+        </GridTile>
+        </GridList>
+        </div>
 
-        );
+    );
     }
 
 }
