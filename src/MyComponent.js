@@ -1,9 +1,8 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import {Tabs, Tab} from 'material-ui/Tabs';
-import Slider from 'material-ui/Slider';
+import {Tab, Tabs} from 'material-ui/Tabs';
 import HomeGrid from './HomeGrid';
-
+import {Subheader} from 'material-ui/Subheader';
+import ManagePosition from './manage-positions/ManagePosition';
 
 
 const styles = {
@@ -28,8 +27,7 @@ const MyComponent = () => (
         </Tab>
         <Tab style={styles.tabs} label="Manage Positions">
             <div>
-                <h2 style={styles.headline}>Tab 2</h2>
-                <p>This is Manage Positions</p>
+                <ManagePosition/>
             </div>
         </Tab>
         <Tab style={styles.tabs} label="Manage Tests">

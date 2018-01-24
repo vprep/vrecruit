@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Radio, {RadioGroup } from 'material-ui/RadioButton';
-import Paper from 'material-ui/Paper';
-import { render } from 'react-dom';
+import {withStyles} from 'material-ui/styles';
+import {render} from 'react-dom';
 import {GridList, GridTile} from 'material-ui/GridList';
+import {Subheader} from 'material-ui/Subheader';
+import ListExampleSimple from './ListExampleSimple';
+import UpComingRecruitments from './UpComingRecruitments';
 
 const styles = {
     root: {
@@ -14,9 +14,13 @@ const styles = {
     },
     gridList: {
         width: '100%',
-        height: '100%',
+        height: '100%!important',
         overflowY: 'auto',
     },
+    title: {
+        fontSize: '18px',
+        paddingLeft: '12%',
+    }
 };
 
 class HomeGrid extends React.Component {
@@ -24,16 +28,21 @@ class HomeGrid extends React.Component {
         spacing:'16',
     };
 
+
     render(){
 
         return (
             <div style={styles.root}>
-    <GridList cellHeight={180} style = {styles.gridList}>
-    <GridTile>
-        <h1>Grid 1</h1>
+    <GridList cellHeight='100%' style = {styles.gridList}>
+        <GridTile className="grid-tile">
+            <div className="grid-panel">
+                <ListExampleSimple/>
+            </div>
         </GridTile>
-        <GridTile>
-        <h1>Grid 2</h1>
+        <GridTile className="grid-tile">
+        <div className="grid-panel">
+            <UpComingRecruitments/>
+        </div>
         </GridTile>
         </GridList>
         </div>

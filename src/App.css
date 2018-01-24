@@ -28,6 +28,73 @@
     font-size: large;
 }
 
+.grid-panel {
+    border: double;
+    border-color: black;
+}
+
+.grid-tile{
+    padding-top: 15%;
+    padding-left: 8%;
+    padding-right: 12%;
+}
+
+.college-name{
+    float: left;
+    width: 89%;
+    padding-bottom: 1%;
+    background-color: blue !important;
+    height: 32px;
+}
+.test{
+    float: right;
+    width: 10%;
+    background-color: green !important;
+    height: 32px;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.list-item{
+    padding-bottom: 5%;
+    padding: 4%;
+}
+.tab-panel{
+    overflow:scroll;
+    height: 400px;
+}
+
+.circle-tab {
+    display: block;
+    height: 100%;
+    width: 10%;
+    line-height: 189%;
+
+    -moz-border-radius: 30px;
+    border-radius: 60%;
+
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+}
+
+.college-inside{
+    width: 80%;
+    float: right;
+}
+
+.sub-header{
+    padding-left: 30%!important;
+    text-decoration: underline;
+}
+
+.upcoming-style{
+    font-size: 9px;
+}
+
+
 @keyframes App-logo-spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
